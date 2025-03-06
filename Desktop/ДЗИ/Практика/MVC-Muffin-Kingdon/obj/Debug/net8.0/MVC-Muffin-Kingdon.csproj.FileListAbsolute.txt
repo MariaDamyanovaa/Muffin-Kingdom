@@ -295,3 +295,4 @@ C:\Users\maria\Desktop\ДЗИ\Практика\MVC-Muffin-Kingdon\bin\Debug\net8
 C:\Users\maria\Desktop\ДЗИ\Практика\MVC-Muffin-Kingdon\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\maria\Desktop\ДЗИ\Практика\MVC-Muffin-Kingdon\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\maria\Desktop\ДЗИ\Практика\MVC-Muffin-Kingdon\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\maria\Desktop\ДЗИ\Практика\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.sourcelink.json
