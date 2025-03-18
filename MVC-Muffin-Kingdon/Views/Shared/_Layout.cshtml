@@ -1,50 +1,120 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MVC_Muffin_Kingdon</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/MVC_Muffin_Kingdon.styles.css" asp-append-version="true" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - MVC_Muffin_Kingdon</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/MVC_Muffin_Kingdon.styles.css" asp-append-version="true" />
+
+	<style>
+		/* Задаваме розовия фон на целия навигационен бар */
+		nav#topMenu {
+			background-color: #f4adb7 !important; /* Розов фон за целия навигационен бар */
+			padding: 0 !important; /* Изчистване на допълнителни разстояния около елементите */
+		}
+
+			nav#topMenu ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center; /* Центриране на елементите */
+			}
+
+			nav#topMenu li {
+				font-size: 24px;
+				line-height: 40px;
+				height: 40px;
+				display: inline-block;
+				/* padding: 10px 20px; */
+				margin: 0 15px;
+			}
+
+			nav#topMenu a {
+				text-decoration: none;
+				color: #42042b; /* Тъмно розовият цвят за линковете */
+				font-weight: bold;
+			}
+
+			/* Подравняване на логото */
+			nav#topMenu .navbar-brand img {
+				height: 120px;
+			}
+
+			nav#topMenu .navbar-nav {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+	</style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MVC_Muffin_Kingdon</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" id="topMenu">
+			<div class="container-fluid">
+				<!-- Лого -->
+				<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+					<img style="height:120px;background-color: #f4adb7;" src="/img/logo2.png" alt="Лого">
+				</a>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - MVC_Muffin_Kingdon - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+				<!-- Бутон за мобилна навигация -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+						aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Навигационно меню -->
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">За нас</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Продукти</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Категории</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="Index">Поръчка</a>
+						</li>
+					</ul>
+					@* <ul class="navbar-nav">
+						<li class="nav-item">
+							<span class="nav-link text-dark">
+								Здравей, @User.Identity.Name!
+							</span>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" href="/User/Logout">Изход</a>
+						</li>
+					</ul>
+ *@
+					<!-- Логин част -->
+					<partial name="_LoginPartial" />
+				</div>
+			</div>
+		</nav>
+
+
+	</header>
+	<div class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+	<footer class="border-top footer text-muted">
+		<div class="container">
+			@*    &copy; 2025 - MVC_Muffin_Kingdon - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
+		</div>
+	</footer>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

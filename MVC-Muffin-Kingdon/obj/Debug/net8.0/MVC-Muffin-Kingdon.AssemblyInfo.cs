@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVC-Muffin-Kingdon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e109e5e12e1dc5376e341e645b9f876f5f1fbc9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d4f612163873dc6cf841608d18e4ba3f68971bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVC-Muffin-Kingdon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVC-Muffin-Kingdon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

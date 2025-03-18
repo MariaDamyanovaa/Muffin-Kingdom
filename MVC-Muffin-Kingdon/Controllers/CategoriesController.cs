@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,8 +10,10 @@ using MVC_Muffin_Kingdon.Data;
 
 namespace MVC_Muffin_Kingdon.Controllers
 {
+    [Authorize]
     public class CategoriesController : Controller
     {
+        
         private readonly ApplicationDbContext _context;
 
         public CategoriesController(ApplicationDbContext context)

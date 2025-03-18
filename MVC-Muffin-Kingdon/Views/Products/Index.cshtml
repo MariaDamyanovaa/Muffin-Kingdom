@@ -1,77 +1,133 @@
 ﻿@model IEnumerable<MVC_Muffin_Kingdon.Data.Product>
 
 @{
-    ViewData["Title"] = "Index";
+	ViewData["Title"] = "Index";
 }
+<head>
+	<style>
+		#forProducts {
+			height: 600px;
+		}
 
-<h1>Index</h1>
+		.card {
+			display: flex;
+		
+		margin:10px 5px 10px 5px;
+	
+		}
+		
+	</style>
+</head>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categories)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Gluten)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Weight)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.URLImage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataReg)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categories.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gluten)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Weight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.URLImage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataReg)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<h1 style="text-align:center; font-style:italic;color:#42042b">Сладки мъфини</h1>
+<br></br>
+
+
+<div class="row">
+	@foreach (var product in Model)
+	{
+		<div class="col-md-4">
+			<div class="card">
+				<a asp-controller="Products" asp-action="Details" asp-route-Id="@product.Id" style="text-decoration:none; color:black; text-align:center">
+					<div class="zoom">
+						<img id="forProducts" src="@product.URLImage" class="card-img-top" alt="@product.Name" style="border:solid 1px #42042b" />
+						<div class="card-body" style="border:solid 1px #42042b">
+							<h4 class="card-title" style="color:#42042b">@product.Name</h4>
+							<p class="card-text" style="margin-bottom:10px;color:#42042b"><strong>Цена: </strong>@product.Price лв.</p>
+
+							<a asp-controller="Orders" asp-action="Create" asp-route-ProductId="@product.Id"
+							   style="background-color:#f4adb7;justify-content:center; padding:1% 30%; margin:13.5%; font-size:20px;color:#42042b; text-decoration:none;border:solid 1px #42042b">
+								Купи
+							</a>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	}
+</div>
+@if (User.IsInRole("Admin"))
+{
+	<p>
+		<a asp-action="Create">Create New</a>
+	</p>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>
+					@Html.DisplayNameFor(model => model.Name)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Categories)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Gluten)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Weight)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Description)
+				</th>
+				<th>
+					@* @Html.DisplayNameFor(model => model.URLImage) *@
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Price)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.DataReg)
+				</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>
+						@Html.DisplayFor(modelItem => item.Name)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Categories.Id)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Gluten)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Weight)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Description)
+					</td>
+					<td>
+						@* @Html.DisplayFor(modelItem => item.URLImage) *@
+						<img src="@item.URLImage" width="100">
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Price)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.DataReg)
+					</td>
+					<td>
+						<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+						<a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+						<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+						&nbsp;
+						<form method="post" asp-controller="Orders" asp-action="CreateWithProductId" asp-route-productId="@item.Id">
+							<input name="countP" id="ccount" type="number" width="3" value="1" style="color:red; font:bold" /> Броя
+							<input type="submit" value="Order" />
+
+
+							<a asp-controller="Orders" asp-action="Create" asp-route-productId="@item.Id" asp-route-countP=ViewBag.counter>К У П И</a>
+							&nbsp;
+						</form>
+
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+} 

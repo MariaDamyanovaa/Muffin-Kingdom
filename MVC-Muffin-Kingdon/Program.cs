@@ -48,6 +48,7 @@ else
 
 app.PrepareDataBase().Wait();
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();

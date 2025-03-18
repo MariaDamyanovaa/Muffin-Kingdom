@@ -2,27 +2,49 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MVC_Muffin_Kingdon.Data;
 
 namespace MVC_Muffin_Kingdon.Controllers
+    
 {
+    [Authorize]
     public class OrdersController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<User> _userManager;    
 
-        public OrdersController(ApplicationDbContext context)
+        public OrdersController(ApplicationDbContext context, UserManager<User> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Orders
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Orsers.Include(o => o.Products).Include(o => o.Users);
-            return View(await applicationDbContext.ToListAsync());
+            if (User.IsInRole("Admin"))
+            {
+                var ApplicationDbContext = _context.Orsers
+                                    .Include(o => o.Users)
+                                    .Include(o => o.Products);
+                return View(await ApplicationDbContext.ToListAsync());
+            }
+            else
+            {
+                var ApplicationDbContext = _context.Orsers
+                                    .Include(o => o.Users)
+                                    .Include(o => o.Products)
+                                    .Where(x => x.UserId == _userManager.GetUserId(User));
+                return View(await ApplicationDbContext.ToListAsync());
+            }
+
+            //var applicationDbContext = _context.Orsers.Include(o => o.Products).Include(o => o.Users);
+            //return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Orders/Details/5
@@ -48,8 +70,8 @@ namespace MVC_Muffin_Kingdon.Controllers
         // GET: Orders/Create
         public IActionResult Create()
         {
-            ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Id");
-            ViewData["UserId"] = new SelectList(_context.Set<User>(), "Id", "Id");
+            ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Name");
+            //ViewData["UserId"] = new SelectList(_context.Set<User>(), "Id", "Id");
             return View();
         }
 
@@ -58,16 +80,18 @@ namespace MVC_Muffin_Kingdon.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,UserId,ProductId,Quantity,DateReg,Description")] Order order)
+        public async Task<IActionResult> Create([Bind("ProductId,Quantity,DateReg,Description")] Order order)
         {
             if (ModelState.IsValid)
             {
+                order.DateReg = DateTime.Now;
+                order.UserId = _userManager.GetUserId(User);
                 _context.Add(order);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Id", order.ProductId);
-            ViewData["UserId"] = new SelectList(_context.Set<User>(), "Id", "Id", order.UserId);
+            ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Name", order.ProductId);
+            //ViewData["UserId"] = new SelectList(_context.Set<User>(), "Id", "Id", order.UserId);
             return View(order);
         }
 

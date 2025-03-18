@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GizFK6oAJCjfkExClrOcCCWL1XZ1RbPNRVcuMkq0x64=",
+  "Hash": "pq9K4ut4KVcuzj6a1BEDmfuXgcAr+YqaHy7l1ghL2ME=",
   "Source": "MVC-Muffin-Kingdon",
   "BasePath": "_content/MVC-Muffin-Kingdon",
   "Mode": "Default",
@@ -1359,6 +1359,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\logo.png",
+      "SourceId": "MVC-Muffin-Kingdon",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\",
+      "BasePath": "_content/MVC-Muffin-Kingdon",
+      "RelativePath": "img/logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mmlmusvk02",
+      "Integrity": "Aiv9KjJL6XjKsIZvxuw4BRWh2wE0NvaVoaYcwhjYmbk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logo.png"
     },
     {
       "Identity": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\js\\site.js",
@@ -4961,6 +4982,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo.mmlmusvk02.png",
+      "AssetFile": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "212441"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Aiv9KjJL6XjKsIZvxuw4BRWh2wE0NvaVoaYcwhjYmbk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 08:11:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mmlmusvk02"
+        },
+        {
+          "Name": "label",
+          "Value": "img/logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Aiv9KjJL6XjKsIZvxuw4BRWh2wE0NvaVoaYcwhjYmbk="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo.png",
+      "AssetFile": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "212441"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Aiv9KjJL6XjKsIZvxuw4BRWh2wE0NvaVoaYcwhjYmbk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 08:11:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Aiv9KjJL6XjKsIZvxuw4BRWh2wE0NvaVoaYcwhjYmbk="
         }
       ]
     },
