@@ -1,69 +1,135 @@
 ﻿@model MVC_Muffin_Kingdon.Data.Product
 
 @{
-    ViewData["Title"] = "Details";
+	ViewData["Title"] = "Details";
 }
+<head>
+	<style>
+		.content {
+			display: flex;
+			justify-content: space-evenly;
+			margin: 10px 10px 10px 10px;
+		}
 
-<h1>Details</h1>
+			.content #right {
+				font-size: 26px;
+				color: #7b1756;
+				margin-left: 100px;
+			}
+
+			.content #left {
+				margin-right: 100px;
+			}
+	</style>
+</head>
+<br />
+
+<h1>@Html.DisplayFor(model => model.Name)</h1>
+<br />
 
 <div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
+
+	@* <dl class="row"> *@
+	@*     <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Categories)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Categories.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Gluten)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Gluten)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Weight)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Weight)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.URLImage)
-          
-        </dt>
-        <dd class = "col-sm-10">
-            <img src="@Html.DisplayFor(model => model.URLImage)" width="300" />
-        
+        </dd> *@
+	@* <dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Categories)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Categories.Name)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Gluten)
+		</dt> *@
+	@* <dd class="col-sm-10">
+			@if (Model.Gluten == true)
+			{
+				<p>Съдържа глутен</p>
+			}
+			@if (Model.Gluten == false)
+			{
+				<p>Не съдържа глутен</p>
+			}
 
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DataReg)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DataReg)
-        </dd>
-    </dl>
+		</dd> *@
+	@* <dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Weight)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Weight)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Description) *@
+	@* </dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Description)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.URLImage)
+
+		</dt>
+		<dd class="col-sm-10">
+			<img src="@Html.DisplayFor(model => model.URLImage)" width="300" />
+
+
+		</dd> *@
+	@* <dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Price)
+		</dt>
+		<dd class="col-sm-10">
+
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.DataReg)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.DataReg)
+		</dd> *@
+	@* </dl> *@
 </div>
+<div class="content">
+	<hr />
+	<div id="left">
+		<img src="@Html.DisplayFor(model => model.URLImage)" style="width:500px;border:solid 1px #7b1756;" />
+	</div>
+	<div id="right">
+		<h3>@Html.DisplayFor(model => model.Name)</h3>
+		<hr />
+		<p>@Html.DisplayFor(model => model.Description)</p>
+		<p>
+			Вимание:@if (Model.Gluten == true)
+			{
+			<p>Съдържа глутен</p>
+			}
+			@if (Model.Gluten == false)
+			{
+			<p>Не съдържа глутен</p>
+			}
+		</p>
+		<hr></hr>
+		<p>@Html.DisplayFor(model => model.Price)лв./бр.</p>
+		<br></br>
+
+		<a asp-controller="Orders" asp-action="Create"
+		   style="background-color:#f4adb7;justify-content:center; padding:1% 30%; margin:13.5%; font-size:20px;color:#42042b; text-decoration:none;border:solid 1px #42042b">
+			Купи
+		</a>
+	</div>
+
+	
+</div>
+
+
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+	@if (User.IsInRole("Admin"))
+	{
+		<a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+	}
+
+	<a asp-action="Index">Назад</a>
+
 </div>

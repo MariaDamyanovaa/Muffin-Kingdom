@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pq9K4ut4KVcuzj6a1BEDmfuXgcAr+YqaHy7l1ghL2ME=",
+  "Hash": "lvgALERQDsor0eYIYPvk1CGJ6y+6UBD62DmIoK9vztY=",
   "Source": "MVC-Muffin-Kingdon",
   "BasePath": "_content/MVC-Muffin-Kingdon",
   "Mode": "Default",
@@ -1380,6 +1380,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\logo2.png",
+      "SourceId": "MVC-Muffin-Kingdon",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\",
+      "BasePath": "_content/MVC-Muffin-Kingdon",
+      "RelativePath": "img/logo2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "flid99yvy5",
+      "Integrity": "nRNA7K1GBs2ptwm5H0+b6fQ6uN+uaZxNI0DbbZDKFpU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logo2.png"
+    },
+    {
+      "Identity": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\logo3.png",
+      "SourceId": "MVC-Muffin-Kingdon",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\",
+      "BasePath": "_content/MVC-Muffin-Kingdon",
+      "RelativePath": "img/logo3#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9efp08ap1u",
+      "Integrity": "z+U0xV1QwTD5vqlYXTE1crED5NnQUW0bLuiePYmnJ6M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logo3.png"
     },
     {
       "Identity": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\js\\site.js",
@@ -5064,6 +5106,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-Aiv9KjJL6XjKsIZvxuw4BRWh2wE0NvaVoaYcwhjYmbk="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo2.flid99yvy5.png",
+      "AssetFile": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\logo2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144924"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nRNA7K1GBs2ptwm5H0+b6fQ6uN+uaZxNI0DbbZDKFpU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 10:25:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "flid99yvy5"
+        },
+        {
+          "Name": "label",
+          "Value": "img/logo2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nRNA7K1GBs2ptwm5H0+b6fQ6uN+uaZxNI0DbbZDKFpU="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo2.png",
+      "AssetFile": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\logo2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144924"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nRNA7K1GBs2ptwm5H0+b6fQ6uN+uaZxNI0DbbZDKFpU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 10:25:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nRNA7K1GBs2ptwm5H0+b6fQ6uN+uaZxNI0DbbZDKFpU="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo3.9efp08ap1u.png",
+      "AssetFile": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\logo3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "148923"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z+U0xV1QwTD5vqlYXTE1crED5NnQUW0bLuiePYmnJ6M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 11:04:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9efp08ap1u"
+        },
+        {
+          "Name": "label",
+          "Value": "img/logo3.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z+U0xV1QwTD5vqlYXTE1crED5NnQUW0bLuiePYmnJ6M="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo3.png",
+      "AssetFile": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\logo3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "148923"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z+U0xV1QwTD5vqlYXTE1crED5NnQUW0bLuiePYmnJ6M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 11:04:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z+U0xV1QwTD5vqlYXTE1crED5NnQUW0bLuiePYmnJ6M="
         }
       ]
     },
@@ -9846,7 +10052,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Mar 2025 11:35:39 GMT"
+          "Value": "Wed, 19 Mar 2025 11:15:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9891,7 +10097,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Mar 2025 11:35:39 GMT"
+          "Value": "Wed, 19 Mar 2025 11:15:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9936,7 +10142,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Mar 2025 11:35:39 GMT"
+          "Value": "Wed, 19 Mar 2025 11:15:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9973,7 +10179,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Mar 2025 11:35:39 GMT"
+          "Value": "Wed, 19 Mar 2025 11:15:04 GMT"
         },
         {
           "Name": "Cache-Control",

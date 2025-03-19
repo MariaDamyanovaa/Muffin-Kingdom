@@ -11,12 +11,11 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-MVC_Muffin_Kingdon-f659eaaf-57da-411c-8e8d-0ee79d966e69")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVC-Muffin-Kingdon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d4f612163873dc6cf841608d18e4ba3f68971bc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87b191d55143a521e6b3e8b11c272294374acd00")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVC-Muffin-Kingdon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVC-Muffin-Kingdon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
