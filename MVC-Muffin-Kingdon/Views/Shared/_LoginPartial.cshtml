@@ -4,10 +4,15 @@
 @inject UserManager<User> UserManager
 
 <ul class="navbar-nav">
+    @{
+        var user = await UserManager.GetUserAsync(User);
+        var firstName = user?.FirstName ?? "Потребител";
+    }
 @if (SignInManager.IsSignedIn(User))
 {
+
     <li class="nav-item">
-        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Здравей, @User.Identity?.Name!</a>
+        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Здравей, @firstName</a>
     </li>
     <li class="nav-item">
         <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">

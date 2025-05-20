@@ -35,18 +35,11 @@ namespace ASPShopBag.Services
         }
         public static async Task SeedRolesAsync(RoleManager<IdentityRole> roleManager)
         {
-            //foreach (var role in Enum.GetValues(Roles))
-            //{
-            //                    var roleExist = await roleManager.RoleExistsAsync(role); 
-            //    if (!roleExist)
-            //    { }
-            //}
-           
                 //Seed Roles
                 await roleManager.CreateAsync(new IdentityRole("Admin"));
                 await roleManager.CreateAsync(new IdentityRole("User"));
                 await roleManager.CreateAsync(new IdentityRole("Guest"));
-            }
+        }
 
             public static async Task SeedSuperAdminAsync(UserManager<User> userManager)
             {
@@ -70,8 +63,7 @@ namespace ASPShopBag.Services
                     if (result.Succeeded)
                     {
                         await userManager.AddToRoleAsync(defaultUser, "Admin");
-                        //await userManager.AddToRoleAsync(defaultUser, Roles.Guest.ToString());
-                        //await userManager.AddToRoleAsync(defaultUser, Roles.User.ToString());                    
+                                     
                     }
                 }
             }

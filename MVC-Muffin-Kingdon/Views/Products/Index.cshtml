@@ -15,12 +15,20 @@
 		margin:10px 5px 10px 5px;
 	
 		}
+		#top{
+			text-align:center;
+		}
 		
 	</style>
 </head>
-
-<h1 style="text-align:center; font-style:italic;color:#42042b">Сладки мъфини</h1>
-<br></br>
+<br />
+<div id="top">
+<img style="height:150px;" src="/img/logo3.png">
+<hr/>
+	<h1 style="color:#7b1756;">Нашите продукти</h1>
+<hr/>
+<br/>
+</div>
 
 
 <div class="row">
@@ -31,12 +39,12 @@
 				<a asp-controller="Products" asp-action="Details" asp-route-Id="@product.Id" style="text-decoration:none; color:black; text-align:center">
 					<div class="zoom">
 						<img id="forProducts" src="@product.URLImage" class="card-img-top" alt="@product.Name" style="border:solid 1px #42042b" />
-						<div class="card-body" style="border:solid 1px #42042b">
-							<h4 class="card-title" style="color:#42042b">@product.Name</h4>
-							<p class="card-text" style="margin-bottom:10px;color:#42042b"><strong>Цена: </strong>@product.Price лв.</p>
+						<div class="card-body" style="border:solid 1px #42042b; background-color:#fcf9f2;">
+							<h4 class="card-title" style="color:#7b1756;">@product.Name</h4>
+							<p class="card-text" style="margin-bottom:10px;color:#7b1756;"><strong>Цена: </strong>@product.Price лв.</p>
 
 							<a asp-controller="Orders" asp-action="Create" asp-route-ProductId="@product.Id"
-							   style="background-color:#f4adb7;justify-content:center; padding:1% 30%; margin:13.5%; font-size:20px;color:#42042b; text-decoration:none;border:solid 1px #42042b">
+							   style="background-color:#f4adb7;justify-content:center; padding:1% 30%; margin:13.5%; font-size:20px;color:#7b1756;; text-decoration:none;border:solid 1px #42042b">
 								Купи
 							</a>
 						</div>
@@ -115,16 +123,7 @@
 						<a asp-action="Details" asp-route-id="@item.Id">Details</a> |
 						<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
 
-						&nbsp;
-						<form method="post" asp-controller="Orders" asp-action="CreateWithProductId" asp-route-productId="@item.Id">
-							<input name="countP" id="ccount" type="number" width="3" value="1" style="color:red; font:bold" /> Броя
-							<input type="submit" value="Order" />
-
-
-							<a asp-controller="Orders" asp-action="Create" asp-route-productId="@item.Id" asp-route-countP=ViewBag.counter>К У П И</a>
-							&nbsp;
-						</form>
-
+						
 					</td>
 				</tr>
 			}

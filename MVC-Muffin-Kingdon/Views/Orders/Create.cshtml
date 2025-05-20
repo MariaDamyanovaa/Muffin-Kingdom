@@ -1,51 +1,71 @@
 ﻿@model MVC_Muffin_Kingdon.Data.Order
 
 @{
-    ViewData["Title"] = "Create";
+	ViewData["Title"] = "Create";
 }
-
-<h1>Create</h1>
-
-<h4>Order</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-          @*   <div class="form-group">
-                <label asp-for="UserId" class="control-label"></label>
-                <select asp-for="UserId" class ="form-control" asp-items="ViewBag.UserId"></select>
-            </div> *@
-            <div class="form-group">
-                <label asp-for="ProductId" class="control-label"></label>
-                <select asp-for="ProductId" class ="form-control" asp-items="ViewBag.ProductId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Quantity" class="control-label"></label>
-                <input asp-for="Quantity" class="form-control" />
-                <span asp-validation-for="Quantity" class="text-danger"></span>
-            </div>
-         @*    <div class="form-group">
-                <label asp-for="DateReg" class="control-label"></label>
-                <input asp-for="DateReg" class="form-control" />
-                <span asp-validation-for="DateReg" class="text-danger"></span>
-            </div> *@
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+<h1 style="text-align:center;color:#7b1756;">Детайли за поръчката на продукта</h1>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+<hr />
+
+	<div class="row">
+		<div class="col-md-4">
+			<form asp-action="Create">
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+				<div class="form-group">
+					<label asp-for="ProductId" class="control-label" style="color: #7b1756;font-size:22px;">Продуст</label>
+					<select asp-for="ProductId" class="form-control" asp-items="ViewBag.ProductId"></select>
+				</div>
+				<div class="form-group">
+					<label asp-for="Quantity" class="control-label" style="color: #7b1756;font-size:22px;">Количество</label>
+					<input asp-for="Quantity" class="form-control" />
+					<span asp-validation-for="Quantity" class="text-danger"></span>
+				</div>
+				<div class="form-group">
+					<label asp-for="Description" class="control-label" style="color: #7b1756;font-size:22px;">Описание на продукта</label>
+					<input asp-for="Description" class="form-control" />
+					<span asp-validation-for="Description" class="text-danger"></span>
+				</div>
+				<br />
+				<div class="form-group">
+					<button style="background-color:#f4adb7;border:solid 1px #42042b;color:#42042b; font-size:20px;" input type="submit" value="Create" class="btn btn-primary">Дабави в количката</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<hr/>
+	<div id="photos" style="text-align:center">
+
+	<video src="/img/video5.mp4" controls autoplay loop muted preload="auto" width="300px" style="border: solid 1px #42042b;">
+	</video>
+	</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
 }

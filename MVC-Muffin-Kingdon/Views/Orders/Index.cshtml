@@ -1,62 +1,105 @@
 ﻿@model IEnumerable<MVC_Muffin_Kingdon.Data.Order>
 
 @{
-    ViewData["Title"] = "Index";
+	ViewData["Title"] = "Index";
+}
+<head>
+	<style>
+		#logo {
+		text-align: center;
+		}
+		tr{
+			font-size:22px;
+			color: #7b1756;
+		}
+
+	</style>
+</head>
+<div id="logo">
+	<img style="height:150px;" src="/img/logo3.png">
+</div>
+<hr/>
+
+<h1 style="color: #7b1756;text-align:center;">Поръчка</h1>
+<hr />
+<br/>
+@if (User.IsInRole("Admin"))
+{ 
+	<form asp-action="ResetView" method="post" style="margin-top: 10px;">
+		<button type="submit" class="btn btn-success">Покажи всички</button>
+	</form> 
 }
 
-<h1>Index</h1>
+<table class="table mt-3">
+	<thead>
+		<tr>
+			<th style="color: #7b1756;">Продукт</th>
+			<th style="color: #7b1756;">Количество</th>
+			<th style="color: #7b1756;">Описание</th>
+			<th style="color: #7b1756;">Цена</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td style="color: #7b1756;">@Html.DisplayFor(modelItem => item.Products.Name)</td>
+				<td style="color: #7b1756;">@Html.DisplayFor(modelItem => item.Quantity)</td>
+				<td style="color: #7b1756;">@Html.DisplayFor(modelItem => item.Description)</td>
+				<td style="color: #7b1756;">@Html.DisplayFor(modelItem => item.Products.Price)лв</td>
+				<td>
+					<img style="width:100px; border:solid 1px #42042b" src="@Html.DisplayFor(modelItem => item.Products.URLImage)"></img>
+					
+				</td>
+				<td>
+					<a asp-action="Edit" asp-route-id="@item.Id">
+						<button style="background-color:#f4adb7; border:solid 1px #42042b;margin-top:10px;" type="submit" class="btn btn-warning">Коригирай</button>
+					</a>
 
-<p>
-    @if (User.IsInRole("Admin"))
-    {
-        <a asp-action="Create">Create New</a>
-    }
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Users)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Products)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Quantity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateReg)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Users.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Products.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateReg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
+					<a asp-action="Delete" asp-route-id="@item.Id">
+						<button style="background-color:#f4adb7; border:solid 1px #42042b;margin-top:10px;" type="submit" class="btn btn-warning">Премахни</button>
+					</a>
+				</td>
+
+			</tr>
+		}
+	</tbody>
 </table>
+<form asp-controller="Orders" asp-action="HideAll" method="post">
+	<button style="background-color:#f4adb7;border:solid 1px #42042b" type="submit" class="btn btn-warning">Завърши поръчка</button>
+</form>
+@if (TempData["Message"] != null)
+{
+	<div class="alert alert-success">
+		@TempData["Message"]
+	</div>
+}
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+

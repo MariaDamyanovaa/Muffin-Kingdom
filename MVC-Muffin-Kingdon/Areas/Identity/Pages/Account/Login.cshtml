@@ -2,45 +2,55 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Вход";
 }
-
-<h1>@ViewData["Title"]</h1>
+<head>
+    <style>
+        #logo{
+            text-align:center;
+        }
+    </style>
+</head>
+<div id="logo">
+<img style="height:150px;" src="/img/logo3.png">
+</div>
+<h1 style ="color:#42042b;">@ViewData["Title"]</h1>
 <div class="row">
     <div class="col-md-4">
         <section>
             <form id="account" method="post">
-                <h2>Use a local account to log in.</h2>
+
+                <h2 style="color:#42042b;">Влез в профила си.</h2>
                 <hr />
                 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
                 <div class="form-floating mb-3">
                     <input asp-for="Input.UserName" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                    <label asp-for="Input.UserName" class="form-label">UserName</label>
+                    <label asp-for="Input.UserName" class="form-label">Потребителско име</label>
                     <span asp-validation-for="Input.UserName" class="text-danger"></span>
                 </div>
                 <div class="form-floating mb-3">
                     <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
-                    <label asp-for="Input.Password" class="form-label">Password</label>
+                    <label asp-for="Input.Password" class="form-label">Парола</label>
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
                 </div>
-                <div class="checkbox mb-3">
+              @*   <div class="checkbox mb-3">
                     <label asp-for="Input.RememberMe" class="form-label">
                         <input class="form-check-input" asp-for="Input.RememberMe" />
-                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        @Html.DisplayNameFor(m => m.Input.RememberMe ) 
                     </label>
+                </div> *@
+                <div>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary" style="background-color:#f4adb7  ; border:solid 1px #42042b; color:#42042b ">Вход</button>
                 </div>
                 <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
-                </div>
-                <div>
                     <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                        <a id="forgot-password" asp-page="./ForgotPassword" style="color:#42042b;">Забравена парола.</a>
                     </p>
                     <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" style="color:#42042b;">Нямаш регистрация?</a>
                     </p>
                     <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation" style="color:#42042b;">Имаш ли нужда от помощ?</a>
                     </p>
                 </div>
             </form>
@@ -48,15 +58,19 @@
     </div>
     <div class="col-md-6 col-md-offset-2">
         <section>
-            <h3>Use another service to log in.</h3>
+            <h3 style="color:#42042b;">
+                Използвайте друга услуга за влизане.
+            </h3 >
             <hr />
             @{
                 if ((Model.ExternalLogins?.Count ?? 0) == 0)
                 {
                     <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
+                        <p style="color:#42042b;">
+                            Няма конфигурирани външни услуги за удостоверяване. Вижте това <a href="https://go.microsoft.com/fwlink/?LinkID=532715">
+                                статия
+                                относно настройването на това ASP.NET приложение да поддържа влизане чрез външни услуги
+                            </a>.
                         </p>
                     </div>
                 }
@@ -77,6 +91,20 @@
         </section>
     </div>
 </div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

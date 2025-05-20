@@ -6,6 +6,7 @@
 	<title>@ViewData["Title"] - MVC_Muffin_Kingdon</title>
 	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	@* <link rel="stylesheet" href="~/img/" asp-append-version="true" /> *@
 	<link rel="stylesheet" href="~/MVC_Muffin_Kingdon.styles.css" asp-append-version="true" />
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -51,16 +52,51 @@
 				align-items: center;
 			}
 
-		.containerFooter{
-			display:flex;
-			
+		.containerFooter {
+			display: flex;
+			justify-content: space-between;
+			text-align: center;
 		}
-		.containerFooter #leftFooter{
-			text-align:center;
-			
-		}
-		
 
+			.containerFooter #leftFooter {
+				padding: 10px 10px 10px 10px;
+				margin-left: 100px;
+			}
+
+			.containerFooter #rightFooter {
+				padding: 10px 10px 10px 10px;
+				margin-right: 100px;
+			}
+			
+		/* Стилизация на dropdown бутона в навигацията */
+		nav#topMenu .dropdown:hover .dropdown-menu {
+			display: block;
+			margin-top: 0;
+		}
+
+		nav#topMenu .dropdown-menu {
+			background-color: #f4adb7; /* същия фон като navbar */
+			border: none;
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+			display: none;
+			position: absolute;
+			z-index: 1000;
+		}
+
+		nav#topMenu .dropdown-item {
+			color: #42042b;
+			font-weight: bold;
+			padding: 10px 20px;
+			white-space: nowrap;
+			text-decoration: none;
+		}
+
+			nav#topMenu .dropdown-item:hover {
+				background-color: #ffd2da;
+			}
+			body{
+			background-color: #faf5ea;
+			}
 
 	</style>
 
@@ -88,11 +124,31 @@
 							<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">За нас</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Продукти</a>
+							<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Контакти</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Категории</a>
+						@* <li class="nav-item">
+							<div class="dropdown">
+								<button onclick="location.href='@Url.Action("Index","Products")'" id="textchange" class="dropbtn">Продукти</button>
+								<a asp-area="" asp-controller="Products" asp-action="Index" asp-route-category="Сладки">Сладки мъфини</a>
+								<a asp-area="" asp-controller="Products" asp-action="Index" asp-route-category="Солени">Солени мъфини</a>
+							</div>
+						</li> *@
+						<li class="nav-item dropdown">
+							<a class="nav-link text-dark dropbtn" href="@Url.Action("Index", "Products")" id="productDropdown">
+								Продукти
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="productDropdown">
+								<li><a class="dropdown-item" asp-area="" asp-controller="Products" asp-action="Index" asp-route-category="Сладки">Сладки мъфини</a></li>
+								<li><a class="dropdown-item" asp-area="" asp-controller="Products" asp-action="Index" asp-route-category="Солени">Солени мъфини</a></li>
+								<li><a class="dropdown-item" asp-area="" asp-controller="Products" asp-action="Index" asp-route-category="С повод">За специални поводи</a></li>
+							</ul>
 						</li>
+						@if (User.IsInRole("Admin"))
+						{
+							<li class="nav-item">
+								<a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Категории</a>
+							</li>
+						}
 						<li class="nav-item">
 							<a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="Index">Поръчка</a>
 						</li>
@@ -115,14 +171,24 @@
 		<div class="containerFooter" style="background-color:#f4adb7">
 			<div id="leftFooter">
 				<h4>Контакти:</h4>
-				<ul>
+				<ul style="list-style-type:none;">
 					<li>email: info@muffinkingdom@gmail.com</li>
 					<li>phone: xxxxxxx056</li>
 					<li>addres: Slavyanska №29,Centre, Sofia</li>
 				</ul>
 			</div>
+
+			<div id="centerFooter">
+				<img src="/img/iflofos.png">
+			</div>
 			<div id="rightFooter">
-				<img src="img/iflofos.png">
+
+				<h4>Защо да изберете нас?</h4>
+				<ul style="list-style-type:none;">
+					<li>Бърза доставка из цяла България.</li>
+					<li>Красиви и вкусни мъфини.</li>
+					<li>Любезен персонал, готов да ви помогне.</li>
+				</ul>
 			</div>
 		</div>
 	</footer>

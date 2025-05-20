@@ -13,6 +13,98 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\a1f7310dabd10b7b663cc12c6589f878.jpg",
+      "PackagePath": "staticwebassets\\img\\a1f7310dabd10b7b663cc12c6589f878.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\bisk1.png",
+      "PackagePath": "staticwebassets\\img\\bisk1.png"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\borderimg.jpg",
+      "PackagePath": "staticwebassets\\img\\borderimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\cake.png",
+      "PackagePath": "staticwebassets\\img\\cake.png"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\cake1.png",
+      "PackagePath": "staticwebassets\\img\\cake1.png"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\cont1.jpg",
+      "PackagePath": "staticwebassets\\img\\cont1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\cont2.jpg",
+      "PackagePath": "staticwebassets\\img\\cont2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\cont3.jpg",
+      "PackagePath": "staticwebassets\\img\\cont3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\gal1.jpg",
+      "PackagePath": "staticwebassets\\img\\gal1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\gal2.jpg",
+      "PackagePath": "staticwebassets\\img\\gal2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\gal3.jpg",
+      "PackagePath": "staticwebassets\\img\\gal3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\gal4.jpg",
+      "PackagePath": "staticwebassets\\img\\gal4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\gal5.jpg",
+      "PackagePath": "staticwebassets\\img\\gal5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\gal6.jpg",
+      "PackagePath": "staticwebassets\\img\\gal6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\gal7.jpg",
+      "PackagePath": "staticwebassets\\img\\gal7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\gal8.jpg",
+      "PackagePath": "staticwebassets\\img\\gal8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\homeimg1.jpg",
+      "PackagePath": "staticwebassets\\img\\homeimg1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\homeimg2.jpg",
+      "PackagePath": "staticwebassets\\img\\homeimg2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\homeimg3.jpg",
+      "PackagePath": "staticwebassets\\img\\homeimg3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\iflofos.png",
+      "PackagePath": "staticwebassets\\img\\iflofos.png"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\img1.jpg",
+      "PackagePath": "staticwebassets\\img\\img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\lillis.png",
+      "PackagePath": "staticwebassets\\img\\lillis.png"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\lillis1.png",
+      "PackagePath": "staticwebassets\\img\\lillis1.png"
+    },
+    {
       "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
@@ -23,6 +115,34 @@
     {
       "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\logo3.png",
       "PackagePath": "staticwebassets\\img\\logo3.png"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\muffin1.png",
+      "PackagePath": "staticwebassets\\img\\muffin1.png"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\ph1.jpg",
+      "PackagePath": "staticwebassets\\img\\ph1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\ph2.jpg",
+      "PackagePath": "staticwebassets\\img\\ph2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\video.mp4",
+      "PackagePath": "staticwebassets\\img\\video.mp4"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\video1.mp4",
+      "PackagePath": "staticwebassets\\img\\video1.mp4"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\video3.mp4",
+      "PackagePath": "staticwebassets\\img\\video3.mp4"
+    },
+    {
+      "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\img\\video5.mp4",
+      "PackagePath": "staticwebassets\\img\\video5.mp4"
     },
     {
       "Id": "C:\\Users\\maria\\Desktop\\ДЗИ\\Практика\\MVC-Muffin-Kingdon\\wwwroot\\js\\site.js",

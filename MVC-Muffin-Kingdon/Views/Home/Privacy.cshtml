@@ -1,6 +1,101 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+	ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
+<head>
+	<style>
+		#up {
+			text-align: center;
+		}
 
-<p>Use this page to detail your site's privacy policy.</p>
+			#up #photos {
+				margin: 5px 50px 50px 50px;
+			}
+
+
+		#content {
+			text-align: center;
+			color: #7b1756;
+			;
+			font-size: 24px;
+		}
+
+			#content #center {
+				display: flex;
+			}
+
+		#contacts {
+			display: flex;
+		}
+	</style>
+</head>
+<div id="up">
+	<img style="height:150px;" src="/img/logo3.png">
+	<hr />
+
+	<h1 style="color: #7b1756;">Как да се свържете с нас?</h1>
+	<hr />
+
+	<div id="photos">
+		<br />
+		<img style="width:300px;border: solid 1px #42042b;" src="/img/cont1.jpg" />
+		<img style="width:300px;border: solid 1px #42042b;" src="/img/cont2.jpg" />
+		<img style="width:300px;border: solid 1px #42042b;" src="/img/cont3.jpg" />
+	</div>
+</div>
+<div id="content">
+	<p>
+		Ако искате вашите най-прекрасни моменти да бъдат допълнени с нещо сладко и уникално, създадено специално за вашия повод – ние сме точният избор!
+		Изработваме специални мъфини,
+		които ще допринесат за незабравимата атмосфера на вашето събитие – сватба, кръщене, рожден ден и много други.
+	</p>
+	<hr />
+	<br />
+	<div id="center">
+		<div id="video" style="justify-content:center;">
+			<video src="/img/video3.mp4" controls autoplay loop muted preload="auto" width="300px" style="border: solid 1px #42042b;">
+			</video>
+		</div>
+		<div id="right">
+			<h2>Поръчка?</h2>
+			<p style="margin-left:100px">
+				Поръчката при нас е лесна и бърза! Просто ни споделете вашите желания, а ние ще се погрижим за всичко останало. Свържете се с нас, изберете вкус, дизайн и количество,
+				и оставете останалото на нас. Вашите специални мъфини ще бъдат приготвени с внимание и любов,
+				за да направят вашия повод още по-сладък!
+			</p>
+			<img style="width:800px;height:300px; border: solid 1px #42042b;" src="~/img/ph1.jpg" />
+		</div>
+	</div>
+	<hr />
+	<div id="contacts">
+		<div id="left">
+			<h1>Как да ни намерите?</h1>
+			<p>
+				Винаги можете да ни намерите на нашия физически адрес: ул. „Славянка“ №29, София. Ако имате въпроси или желаете да се
+				консултирате с нас на място, ще се радваме да ви посрещнем! Можете да се свържете с нас и по телефон: xxxxxxx056 – нашият екип е на разположение,
+				за да отговори на всички ваши въпроси. Ако желаете персонализиран дизайн,
+				с удоволствие ще обсъдим вашите идеи и ще ги превърнем в реалност!
+			</p>
+
+		</div>
+		<div id="right">
+			<img style="width:300px;border: solid 1px #42042b;" src="/img/ph2.jpg"></img>
+		</div>
+	</div>
+	<div id="gallery">
+		<h1>Галерия</h1>
+		<hr />
+		<div id="row1">
+
+			<img style=" width:300px;border: solid 1px #42042b;" src="/img/gal1.jpg" />
+			<img style="width:300px;border: solid 1px #42042b;" src="/img/gal6.jpg" />
+			
+			<img style="width:304px;border: solid 1px #42042b;" src="/img/gal3.jpg" />
+		</div>
+		<div style ="margin-top:10px;" id="row2">
+			<img style="height:320px;width:300px;border: solid 1px #42042b;" src="/img/gal4.jpg" />
+			<img style="height:320px; width:300px;border: solid 1px #42042b;" src="/img/gal5.jpg" />
+		</div>
+	</div>
+
+
+</div>

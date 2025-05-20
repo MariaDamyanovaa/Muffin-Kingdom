@@ -296,3 +296,16 @@ C:\Users\maria\Desktop\ДЗИ\Практика\MVC-Muffin-Kingdon\obj\Debug\net8
 C:\Users\maria\Desktop\ДЗИ\Практика\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.pdb
 C:\Users\maria\Desktop\ДЗИ\Практика\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.genruntimeconfig.cache
 C:\Users\maria\Desktop\ДЗИ\Практика\MVC-Muffin-Kingdon\obj\Debug\net8.0\ref\MVC-Muffin-Kingdon.dll
+C:\Users\maria\Desktop\Muffin-Kingdom\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.csproj.AssemblyReference.cache
+C:\Users\maria\Desktop\Muffin-Kingdom\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maria\Desktop\Muffin-Kingdom\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.AssemblyInfoInputs.cache
+C:\Users\maria\Desktop\Muffin-Kingdom\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.AssemblyInfo.cs
+C:\Users\maria\Desktop\Muffin-Kingdom\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.csproj.CoreCompileInputs.cache
+C:\Users\maria\Desktop\Muffin-Kingdom\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\maria\Desktop\Muffin-Kingdom\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\maria\Desktop\Muffin-Kingdom\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.RazorAssemblyInfo.cache
+C:\Users\maria\Desktop\Muffin-Kingdom\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.RazorAssemblyInfo.cs
+C:\Users\maria\Desktop\Muffin-Kingdom\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.sourcelink.json
+C:\Users\maria\Desktop\Muffin-Kingdom\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.dll
+C:\Users\maria\Desktop\Muffin-Kingdom\MVC-Muffin-Kingdon\obj\Debug\net8.0\refint\MVC-Muffin-Kingdon.dll
+C:\Users\maria\Desktop\Muffin-Kingdom\MVC-Muffin-Kingdon\obj\Debug\net8.0\MVC-Muffin-Kingdon.pdb

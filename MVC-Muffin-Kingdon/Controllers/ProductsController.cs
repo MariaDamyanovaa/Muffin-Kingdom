@@ -10,7 +10,7 @@ using MVC_Muffin_Kingdon.Data;
 
 namespace MVC_Muffin_Kingdon.Controllers
 {
-    [Authorize]
+    
     public class ProductsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -21,10 +21,17 @@ namespace MVC_Muffin_Kingdon.Controllers
         }
 
         // GET: Products
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string category)
         {
-            var applicationDbContext = _context.Products.Include(p => p.Categories);
-            return View(await applicationDbContext.ToListAsync());
+            //var applicationDbContext = _context.Products.Include(p => p.Categories);
+            //return View(await applicationDbContext.ToListAsync());
+            var allData = _context.Products.Include(b => b.Categories);
+            if (category != null) 
+            {
+                var applicationDbContext = allData.Where(x => x.Categories.Name == category);
+                return View(await applicationDbContext.ToListAsync());
+            }
+            return View(await allData.ToListAsync());
         }
 
         // GET: Products/Details/5
@@ -53,9 +60,7 @@ namespace MVC_Muffin_Kingdon.Controllers
             return View();
         }
 
-        // POST: Products/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,CategoryId,Gluten,Weight,Description,URLImage,Price,DataReg")] Product product)
@@ -87,9 +92,7 @@ namespace MVC_Muffin_Kingdon.Controllers
             return View(product);
         }
 
-        // POST: Products/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CategoryId,Gluten,Weight,Description,URLImage,Price,DataReg")] Product product)

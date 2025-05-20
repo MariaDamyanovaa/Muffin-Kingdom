@@ -28,10 +28,8 @@ builder.Services.AddControllers(
     options =>
     options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 
-//if (builder.Environment.IsDevelopment())
-//{
-//    builder.AddRazorRuntimeCompilation();
-//}
+
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -60,6 +58,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+app.UseSession();
 
 app.Run();
 
